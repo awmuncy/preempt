@@ -1,0 +1,28 @@
+{
+  "name": "preempt",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Allen Muncy",
+  "license": "ISC",
+  "dependencies": {
+    "laravel-mix": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.22.9",
+    "sass-loader": "^7.1.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Replace Scripts & Style URLs",
+  "version": "0.11",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "description": "Replacing scripts and styles at runtime",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "run_at": "document_start",
+        "js": ["before-page-load.js"]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["after-page-load.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
